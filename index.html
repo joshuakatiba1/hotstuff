@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Evangeline ♥️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background:
+      radial-gradient(ellipse at top, #663b91, transparent 65%),
+      linear-gradient(145deg, #170d29, #29133f, #10091e);
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.star {
+    position: absolute;
+    color: #e6caff;
+    animation: twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle {
+    from { opacity: .15; transform: scale(.7); }
+    to { opacity: .9; transform: scale(1.2); }
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    color: #d7a8ff;
+    pointer-events: none;
+    animation: floatUp linear forwards;
+    z-index: 1;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(30deg);
+        opacity: 0;
+    }
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 18px;
+}
+
+.opening {
+    text-align: center;
+    max-width: 550px;
+    animation: appear 2s ease;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.small-text {
+    color: #d5b3f5;
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(55px, 12vw, 95px);
+    font-weight: 400;
+    color: #f2dfff;
+    text-shadow: 0 0 30px #c084fc66;
+    line-height: 1.2;
+}
+
+.subtitle {
+    color: #e2d1f0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-style: italic;
+    margin: 15px 0 35px;
+}
+
+.open-button {
+    border: 1px solid #d7b0f3;
+    background: linear-gradient(120deg, #8050a8, #583079);
+    padding: 15px 34px;
+    border-radius: 40px;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 0 25px #b77bff44;
+    transition: .3s;
+}
+
+.open-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 35px #d3a0ff88;
+}
+
+.envelope {
+    font-size: 48px;
+    margin-bottom: 25px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    50% { transform: scale(1.12); }
+}
+
+.letter {
+    display: none;
+    width: 100%;
+    max-width: 720px;
+    background: linear-gradient(145deg, #fffaff, #f3eafa);
+    color: #453052;
+    padding: clamp(25px, 6vw, 55px);
+    border-radius: 18px;
+    box-shadow: 0 20px 90px #00000066;
+    animation: letterOpen 1.2s ease;
+    margin: 25px 0;
+}
+
+@keyframes letterOpen {
+    from { opacity: 0; transform: translateY(30px) scale(.96); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.letter-top {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.letter-top .heart-icon {
+    font-size: 35px;
+}
+
+.letter-top h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 53px;
+    font-weight: 400;
+    color: #784b99;
+    margin-top: 10px;
+}
+
+.letter-top p {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #a27db8;
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+
+.letter-body {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    line-height: 1.85;
+    white-space: pre-line;
+}
+
+.letter-body p {
+    margin-bottom: 23px;
+}
+
+.letter-body .special {
+    color: #8755a8;
+    font-style: italic;
+}
+
+.signature {
+    text-align: right;
+    font-family: 'Great Vibes', cursive;
+    font-size: 38px;
+    color: #8956a7;
+    margin-top: 35px;
+}
+
+.music-control {
+    position: fixed;
+    bottom: 22px;
+    right: 20px;
+    z-index: 10;
+    background: #6b4188;
+    border: 1px solid #c69ce8;
+    border-radius: 50px;
+    padding: 12px 17px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 5px 25px #0005;
+    font-size: 13px;
+}
+
+.music-control:hover {
+    background: #8954aa;
+}
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+    color: #d4b5ec;
+    margin: 30px 0 55px;
+}
+
+@media(max-width: 600px) {
+    .letter-body {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .letter-top h2 {
+        font-size: 45px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars" id="stars"></div>
+
+<div class="container">
+
+    <div class="opening" id="opening">
+
+        <div class="small-text">A little something for you</div>
+
+        <div class="envelope">💌</div>
+
+        <h1>My Evangeline</h1>
+
+        <div class="subtitle">
+            Some things are better said from the heart...
+        </div>
+
+        <button class="open-button" onclick="openLetter()">
+            Open your letter ♥️
+        </button>
+
+    </div>
+
+    <div class="letter" id="letter">
+
+        <div class="letter-top">
+            <div class="heart-icon">💜</div>
+            <h2>Good morning, my love</h2>
+            <p>A letter from my heart to yours</p>
+        </div>
+
+        <div class="letter-body">
+
+            <p>Good morning hot stuff♥️.</p>
+
+            <p>I really hope this message doesn't find you with a heavy heart, and I'm really sorry, my love, for making you feel taken for granted. You will always be my Evangeline 😌</p>
+
+            <p>In everything, I want you to know that I love you and always will 😌. You have always been the reason for the smile on my face.</p>
+
+            <p>I stayed up for a significant part of the night trying to figure out what to say or how I'd say it, but I couldn't figure it out, so I decided I'd just write you this letter. I hope I'll be able to relay my message to you well and not put any pressure on you.</p>
+
+            <p class="special">I don't want to be the reason why you feel scared or unsafe.</p>
+
+            <p>Of late, I've been feeling like you are actually scared of me. That's why I've been reluctant to touch you and cuddle you sometimes. It sometimes feels like maybe I've become a scary person, and every time I think of what you told me about your past experience, I do not wish to be that person. I guess that's why I choose to always give you some space.</p>
+
+            <p>It's not that I'm angry at you or don't desire you anymore. I want to make you feel more comfortable and more free around me, and not have you dread my presence every time.</p>
+
+            <p>Sometimes I know my decisions aren't always the right ones, and I really hope that I don't make you feel neglected. I just really hope I can be better and get through to you better without having to argue or hurt you.</p>
+
+            <p>I really love you and want us to build more experiences together♥️.</p>
+
+            <p>As you read this, please don't get mad at me. I really hope it doesn't come out as cringy. Also, let me know how I can be able to love you better and how I can make you feel safer around me.</p>
+
+            <p>I don't want you to always be looking over your shoulder, afraid that I'm always looking to pounce on you.</p>
+
+            <p class="special">Remember, I want you. Never forget that the love I have for you knows no bounds.</p>
+
+            <p>Hope you wake up feeling amazing and have a blast today 😌😌♥️♥️</p>
+
+        </div>
+
+        <div class="signature">
+            Always yours ♥️
+        </div>
+
+        <div class="footer">
+            Made with love, just for you.
+        </div>
+
+    </div>
+
+</div>
+
+<button class="music-control" onclick="toggleMusic()" id="musicBtn">
+    ♫ Play our melody
+</button>
+
+<script>
+
+// STARRY BACKGROUND
+const stars = document.getElementById("stars");
+
+for (let i = 0; i < 65; i++) {
+    let star = document.createElement("div");
+    star.className = "star";
+    star.innerHTML = "✦";
+    star.style.left = Math.random() * 100 + "%";
+    star.style.top = Math.random() * 100 + "%";
+    star.style.fontSize = (Math.random() * 9 + 5) + "px";
+    star.style.animationDelay = Math.random() * 3 + "s";
+    stars.appendChild(star);
+}
+
+// FLOATING HEARTS
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = ["♥️", "♡", "✧", "💜"][
+        Math.floor(Math.random() * 4)
+    ];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 17 + 12) + "px";
+    heart.style.animationDuration = (Math.random() * 5 + 6) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 11000);
+}
+
+setInterval(createHeart, 850);
+
+// OPEN LETTER
+function openLetter() {
+    document.getElementById("opening").style.display = "none";
+    document.getElementById("letter").style.display = "block";
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    startMusic();
+}
+
+// ORIGINAL GENTLE PIANO MELODY
+let audioContext;
+let musicPlaying = false;
+let musicTimer;
+let noteIndex = 0;
+
+// Notes for a soft, romantic piano-like melody
+const melody = [
+    [261.63, 329.63, 392.00],
+    [293.66, 349.23, 440.00],
+    [261.63, 329.63, 392.00],
+    [220.00, 293.66, 349.23],
+
+    [261.63, 329.63, 440.00],
+    [293.66, 349.23, 392.00],
+    [246.94, 329.63, 392.00],
+    [220.00, 293.66, 349.23]
+];
+
+function playNote(frequency, time, duration, volume) {
+
+    const oscillator = audioContext.createOscillator();
+    const gain = audioContext.createGain();
+
+    oscillator.type = "sine";
+    oscillator.frequency.value = frequency;
+
+    gain.gain.setValueAtTime(0, time);
+    gain.gain.linearRampToValueAtTime(volume, time + 0.08);
+    gain.gain.exponentialRampToValueAtTime(
+        0.001, time + duration
+    );
+
+    oscillator.connect(gain);
+    gain.connect(audioContext.destination);
+
+    oscillator.start(time);
+    oscillator.stop(time + duration + 0.1);
+}
+
+function playChord() {
+
+    if (!musicPlaying) return;
+
+    const chord = melody[noteIndex % melody.length];
+    const now = audioContext.currentTime;
+
+    // Soft chord
+    chord.forEach((note, index) => {
+        playNote(note, now + index * 0.13, 2.5, 0.045);
+    });
+
+    // Gentle high note
+    playNote(chord[2] * 2, now + 0.5, 2, 0.018);
+
+    noteIndex++;
+}
+
+function startMusic() {
+
+    if (musicPlaying) return;
+
+    if (!audioContext) {
+        audioContext = new (
+            window.AudioContext ||
+            window.webkitAudioContext
+        )();
+    }
+
+    audioContext.resume();
+
+    musicPlaying = true;
+
+    document.getElementById("musicBtn").innerHTML =
+        "♫ Pause melody";
+
+    playChord();
+
+    musicTimer = setInterval(playChord, 2200);
+}
+
+function stopMusic() {
+
+    musicPlaying = false;
+
+    clearInterval(musicTimer);
+
+    document.getElementById("musicBtn").innerHTML =
+        "♫ Play our melody";
+}
+
+function toggleMusic() {
+
+    if (musicPlaying) {
+        stopMusic();
+    } else {
+        startMusic();
+    }
+}
+
+</script>
+
+</body>
+</html>
